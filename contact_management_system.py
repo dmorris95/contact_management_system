@@ -93,11 +93,11 @@ def add_contact(contacts):
 
         #once all information has been validated add contact to dictionary
         contacts[key_input] = {"Name": name_input, "Phone Number": key_input, "Email": email_input, "Address": address_input, "Notes": notes_input}
+        print("Contact has been successfully added!")
     except:
         print("An error occured, please try again!")
     
     finally:
-        print("Contact successfully added!")
         display_menu(contacts)
 
 
@@ -184,7 +184,6 @@ def delete_contact(contacts):
             if num_del in contacts:
                 del contacts[num_del]
                 print("Contact has been successfully deleted.")
-
             else:
                 print("That number is not in your contacts. Please try again")
         except:
@@ -229,7 +228,7 @@ def export_contacts(contacts, filename):
         try:
             with open(filename, 'w') as file:
                 for key_phone, contact_data in contacts.items():
-                    file.write(f"Key Identifier: {key_phone}\nName:{contact_data["Name"]} ------ Phone Number: {contact_data["Phone Number"]}\nEmail: {contact_data["Email"]}\nAddress: {contact_data["Address"]} -------- Notes: {contact_data["Notes"]}\n\n")
+                    file.write(f"Key Identifier: {key_phone}\nName: {contact_data["Name"]} ------ Phone Number: {contact_data["Phone Number"]}\nEmail: {contact_data["Email"]}\nAddress: {contact_data["Address"]} -------- Notes: {contact_data["Notes"]}\n\n")
                 print("Contacts has been successfully exported to the file!")
         except FileNotFoundError:
             print("File not found please try again!")
