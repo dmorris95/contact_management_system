@@ -1,0 +1,15 @@
+Key Identifier: 123-456-7890
+Name:john smith ------ Phone Number: 123-456-7890
+Email: john.smith@gmail.com
+Address: 12 south road -------- Notes:  super cool guy
+
+Key Identifier: 234-123-5678
+Name:George Jenkins ------ Phone Number: 234-123-5678
+Email: gJenkin@hotmail.com
+Address: 212 Elm Road -------- Notes: Strange guy with cool glasses
+
+Key Identifier: 234-123-1234
+Name:Fred Ericson ------ Phone Number: 234-123-1234
+Email: fredEricks@gmail.com
+Address: 2121 Silver Street -------- Notes: Big Boss Man
+
