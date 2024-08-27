@@ -121,14 +121,14 @@ def edit_contact(contacts):
                     changed_info = ""
                     if user_choice > 0 and user_choice < 6:
                         if user_choice == 1:
-                            print(f"Current Name: {contacts[num_input]["Name"]}")
+                            print(f"Current Name: {contacts[num_input]['Name']}")
                             changed_info = input("What would you like to change the name to: ")
                             while changed_info == "":
                                 changed_info = input("You can't leave the name blank!\nPlease try again: ")
                             contacts[num_input].update({"Name": changed_info})
 
                         elif user_choice == 2:
-                            print(f"Current Phone Number: {contacts[num_input]["Phone Number"]}")
+                            print(f"Current Phone Number: {contacts[num_input]['Phone Number']}")
                             changed_info = input("Please enter the contacts new phone number: ")
                             while True:
                                 if changed_info in contacts:
@@ -142,7 +142,7 @@ def edit_contact(contacts):
                                         changed_info = input("The phone number must be in the XXX-XXX-XXXX format, please try again: ")
 
                         elif user_choice == 3:
-                            print(f"Current Email: {contacts[num_input]["Email"]}")
+                            print(f"Current Email: {contacts[num_input]['Email']}")
                             changed_info = input("Please enter the contacts new email: ")
                             while True:
                                 if re.match(email_pattern, changed_info):
@@ -151,14 +151,14 @@ def edit_contact(contacts):
                                     changed_info = input("Contacts email must be entered in the proper format.\nPlease enter the contatcs email: ")
 
                         elif user_choice == 4:
-                            print(f"Current Address: {contacts[num_input]["Address"]}")
+                            print(f"Current Address: {contacts[num_input]['Address']}")
                             changed_info = input("Please enter the contacts new address: ")
                             while changed_info == "":
                                 changed_info = input("Contacts address can't be empty!\nPlease enter the contacts new address: ")
                             contacts[num_input].update({"Address": changed_info})
                             
                         elif user_choice == 5:
-                            print(f"Current Notes for {contacts[num_input]["Name"]}: {contacts[num_input]["Notes"]}")
+                            print(f"Current Notes for {contacts[num_input]['Name']}: {contacts[num_input]['Notes']}")
                             changed_info = input("Please enter the new notes: ")
                             while changed_info == "":
                                 changed_info = input("Notes can't be left blank!")
@@ -203,7 +203,7 @@ def search_contact(contacts):
                 #Loop through dictionary to find contact
                 for c_num, c_data in contacts.items():
                     if (c_num) == num_search:
-                        print(f"Contact Number: {c_num}\nName: {c_data["Name"]}\nPhone Number: {c_num}\nEmail: {c_data["Email"]}\nAddress: {c_data["Address"]}\nNotes: {c_data["Notes"]}")
+                        print(f"Contact Number: {c_num}\nName: {c_data['Name']}\nPhone Number: {c_num}\nEmail: {c_data['Email']}\nAddress: {c_data['Address']}\nNotes: {c_data['Notes']}")
             else:
                 print("The entered phone number is not one of your contacts. Please try again!")
         except:
